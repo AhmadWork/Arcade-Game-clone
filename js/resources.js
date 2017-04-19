@@ -15,10 +15,7 @@
      */
     function load(urlOrArr) {
         if(urlOrArr instanceof Array) {
-            /* If the developer passed in an array of images
-             * loop through each value and call our image
-             * loader on that image file
-             */
+    
             urlOrArr.forEach(function(url) {
                 _load(url);
             });
@@ -109,3 +106,5 @@
         isReady: isReady
     };
 })();
+
+
