@@ -1,5 +1,4 @@
-
-
+'use strict';
 //Here we define the player class 
 var Player = function(x,y) {
     this.x = x;
@@ -67,18 +66,18 @@ Player.prototype.collision = function(){
 
   for (var i = 0; i < allEnemies.length; i++) {
     // MDN 2D collision detection method
-if (player.x < allEnemies[i].x + 50 &&
-   player.x +50 > allEnemies[i].x &&
-   player.y < allEnemies[i].y + 10 &&
-   10 + player.y > allEnemies[i].y) {
-    player.live-=1;
-    player.score-=100;
+if (this.x < allEnemies[i].x + 50 &&
+   this.x +50 > allEnemies[i].x &&
+   this.y < allEnemies[i].y + 10 &&
+   10 + this.y > allEnemies[i].y) {
+    this.live-=1;
+    this.score-=100;
     document.getElementById("score").innerHTML = "score :"+ this.score;
     document.getElementById("live").innerHTML = "live :"+ this.live;
-    if(player.live==0){
+    if(this.live==0){
 alert("you lost !!");
-    player.score=0;
-        player.live=5;
+    this.score=0;
+        this.live=5;
             document.getElementById("score").innerHTML = "score :"+ this.score;
     document.getElementById("live").innerHTML = "live :"+ this.live;
     }
