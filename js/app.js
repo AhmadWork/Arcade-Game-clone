@@ -82,7 +82,7 @@ alert("you lost !!");
     document.getElementById("live").innerHTML = "live :"+ this.live;
     }
 
-   player.reset();
+   this.reset();
 }
 }
 }
